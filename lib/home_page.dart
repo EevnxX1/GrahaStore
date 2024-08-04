@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './login_page.dart';
 
 class homePage extends StatelessWidget {
   const homePage({super.key});
@@ -8,10 +9,11 @@ class homePage extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height; //dari layar
     final screenWidht = MediaQuery.of(context).size.width; //dari layar
     return Scaffold(
-      body: Center(
+      body: SingleChildScrollView(
+        child: Center(
         child: Container(
         width: screenWidht * 0.9,
-        margin: EdgeInsets.only(top: 30),
+        margin: EdgeInsets.only(top: 30, bottom: 30),
         child: Column(
           children: <Widget>[
             Container(
@@ -185,8 +187,465 @@ class homePage extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              margin: EdgeInsets.only(top: 8),
+              child: Image.asset(
+                '../asset/presale.png',
+                fit: BoxFit.contain,
+                width: screenWidht * 0.9,
+                ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 8),
+              child: Wrap(
+                direction: Axis.horizontal,
+                spacing: 10,
+                runSpacing: 10,
+                children: <Widget>[
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+                    },
+                    child: Container(
+                    padding: EdgeInsets.only(bottom: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.red.shade50,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    width: (screenWidht * 0.9) * 0.47,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                          ),
+                          child: Image.asset(
+                            '../asset/sepatu1.png',
+                            fit: BoxFit.contain,
+                            width: (screenWidht * 0.9) * 0.47,
+                            ),
+                        ),
+                        Container(
+                          width: (screenWidht * 0.9) * 0.47,
+                          padding: EdgeInsets.only(top: 3, bottom: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent.shade100
+                          ),
+                          child: Text(
+                            'NEW ARRIVAL',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 8),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'NIKE - ',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                  )
+                                ),
+                                TextSpan(
+                                  text: 'Jordan Tatum 2 pf Men\'s Basketball Shoes',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 12
+                                  )
+                                )
+                              ]
+                            )
+                          )
+                        )
+                      ],
+                    ),
+                  ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+                    },
+                    child: Container(
+                    padding: EdgeInsets.only(bottom: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.red.shade50,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    width: (screenWidht * 0.9) * 0.47,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                          ),
+                          child: Image.asset(
+                            '../asset/sepatu2.png',
+                            fit: BoxFit.contain,
+                            width: (screenWidht * 0.9) * 0.47,
+                            ),
+                        ),
+                        Container(
+                          width: (screenWidht * 0.9) * 0.47,
+                          padding: EdgeInsets.only(top: 3, bottom: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent.shade100
+                          ),
+                          child: Text(
+                            'NEW ARRIVAL',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 8),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'NIKE - ',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                  )
+                                ),
+                                TextSpan(
+                                  text: 'Jordan Tatum 2 pf Men\'s Basketball Shoes',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 12
+                                  )
+                                )
+                              ]
+                            )
+                          )
+                        )
+                      ],
+                    ),
+                  ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+                    },
+                    child: Container(
+                    padding: EdgeInsets.only(bottom: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.red.shade50,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    width: (screenWidht * 0.9) * 0.47,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                          ),
+                          child: Image.asset(
+                            '../asset/sepatu3.png',
+                            fit: BoxFit.contain,
+                            width: (screenWidht * 0.9) * 0.47,
+                            ),
+                        ),
+                        Container(
+                          width: (screenWidht * 0.9) * 0.47,
+                          padding: EdgeInsets.only(top: 3, bottom: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent.shade100
+                          ),
+                          child: Text(
+                            'NEW ARRIVAL',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 8),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'NIKE - ',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                  )
+                                ),
+                                TextSpan(
+                                  text: 'Jordan Tatum 2 pf Men\'s Basketball Shoes',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 12
+                                  )
+                                )
+                              ]
+                            )
+                          )
+                        )
+                      ],
+                    ),
+                  ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+                    },
+                    child: Container(
+                    padding: EdgeInsets.only(bottom: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.red.shade50,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    width: (screenWidht * 0.9) * 0.47,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                          ),
+                          child: Image.asset(
+                            '../asset/sepatu4.png',
+                            fit: BoxFit.contain,
+                            width: (screenWidht * 0.9) * 0.47,
+                            ),
+                        ),
+                        Container(
+                          width: (screenWidht * 0.9) * 0.47,
+                          padding: EdgeInsets.only(top: 3, bottom: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent.shade100
+                          ),
+                          child: Text(
+                            'NEW ARRIVAL',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 8),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'NIKE - ',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                  )
+                                ),
+                                TextSpan(
+                                  text: 'Jordan Tatum 2 pf Men\'s Basketball Shoes',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 12
+                                  )
+                                )
+                              ]
+                            )
+                          )
+                        )
+                      ],
+                    ),
+                  ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+                    },
+                    child: Container(
+                    padding: EdgeInsets.only(bottom: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.red.shade50,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    width: (screenWidht * 0.9) * 0.47,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                          ),
+                          child: Image.asset(
+                            '../asset/sepatu5.png',
+                            fit: BoxFit.contain,
+                            width: (screenWidht * 0.9) * 0.47,
+                            ),
+                        ),
+                        Container(
+                          width: (screenWidht * 0.9) * 0.47,
+                          padding: EdgeInsets.only(top: 3, bottom: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent.shade100
+                          ),
+                          child: Text(
+                            'NEW ARRIVAL',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 8),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'NIKE - ',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                  )
+                                ),
+                                TextSpan(
+                                  text: 'Jordan Tatum 2 pf Men\'s Basketball Shoes',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 12
+                                  )
+                                )
+                              ]
+                            )
+                          )
+                        )
+                      ],
+                    ),
+                  ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+                    },
+                    child: Container(
+                    padding: EdgeInsets.only(bottom: 8),
+                    decoration: BoxDecoration(
+                      color: Colors.red.shade50,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    width: (screenWidht * 0.9) * 0.47,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                          ),
+                          child: Image.asset(
+                            '../asset/sepatu6.png',
+                            fit: BoxFit.contain,
+                            width: (screenWidht * 0.9) * 0.47,
+                            ),
+                        ),
+                        Container(
+                          width: (screenWidht * 0.9) * 0.47,
+                          padding: EdgeInsets.only(top: 3, bottom: 3),
+                          decoration: BoxDecoration(
+                            color: Colors.redAccent.shade100
+                          ),
+                          child: Text(
+                            'NEW ARRIVAL',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 8),
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'NIKE - ',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold
+                                  )
+                                ),
+                                TextSpan(
+                                  text: 'Jordan Tatum 2 pf Men\'s Basketball Shoes',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 12
+                                  )
+                                )
+                              ]
+                            )
+                          )
+                        )
+                      ],
+                    ),
+                  ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
+      ),
       ),
       )
     );

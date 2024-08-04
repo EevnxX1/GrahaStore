@@ -150,7 +150,7 @@ class loginPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
-                        Container(
+                    Container(
                     width: 140,
                     height: 40,
                     child: TextButton(
