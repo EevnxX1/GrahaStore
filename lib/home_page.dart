@@ -6,14 +6,13 @@ class homePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height; //dari layar
     final screenWidht = MediaQuery.of(context).size.width; //dari layar
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
         child: Container(
         width: screenWidht * 0.9,
-        margin: EdgeInsets.only(top: 30, bottom: 30),
+        margin: EdgeInsets.only(top: 30, bottom: 20),
         child: Column(
           children: <Widget>[
             Container(
@@ -635,7 +634,8 @@ class homePage extends StatelessWidget {
                               ]
                             )
                           )
-                        )
+                        ),
+
                       ],
                     ),
                   ),
@@ -647,7 +647,88 @@ class homePage extends StatelessWidget {
         ),
       ),
       ),
-      )
+      ),
+      bottomNavigationBar: Container(
+        height: 65,
+        padding: EdgeInsets.symmetric(horizontal: 40),
+        decoration: BoxDecoration(
+          color: Colors.black87,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+              },
+              child: Container(
+                width: 36,
+                child: Image.asset(
+                  '../asset/Home_fill.png',
+                  fit: BoxFit.contain,
+                  ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+              },
+              child: Container(
+                width: 32,
+                child: Image.asset(
+                  '../asset/Bag_fill.png',
+                  fit: BoxFit.contain,
+                  ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+              },
+              child: Container(
+                width: 32,
+                child: Image.asset(
+                  '../asset/Bookmark_fill.png',
+                  fit: BoxFit.contain,
+                  ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return loginPage();
+                          }
+                          ),
+                        );
+              },
+              child: Container(
+                width: 32,
+                child: Image.asset(
+                  '../asset/User_fill.png',
+                  fit: BoxFit.contain,
+                  ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
