@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './login_page.dart';
+import './detail_page.dart';
 
 class homePage extends StatelessWidget {
   const homePage({super.key});
@@ -205,7 +206,7 @@ class homePage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return detailPage();
                           }
                           ),
                         );
@@ -278,7 +279,7 @@ class homePage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return detailPage();
                           }
                           ),
                         );
@@ -351,7 +352,7 @@ class homePage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return detailPage();
                           }
                           ),
                         );
@@ -424,7 +425,7 @@ class homePage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return detailPage();
                           }
                           ),
                         );
@@ -497,7 +498,7 @@ class homePage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return detailPage();
                           }
                           ),
                         );
@@ -570,7 +571,7 @@ class homePage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return detailPage();
                           }
                           ),
                         );
