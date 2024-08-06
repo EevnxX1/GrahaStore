@@ -9,6 +9,17 @@ class paymentPage extends StatefulWidget {
 }
 
 class _paymentPageState extends State<paymentPage> {
+  int _angka = 1;
+  void _increment() {
+    setState(() {
+      _angka += 1;
+    });
+  }
+  void _decrement() {
+    setState(() {
+      _angka -= 1;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height; //dari layar
@@ -98,13 +109,16 @@ class _paymentPageState extends State<paymentPage> {
                                   ),
                                 ),
                                 InkWell(
-                                  onTap: () {},
-                                  child: Text(
+                                  onTap: () => _decrement(),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(horizontal: 4),
+                                    child: Text(
                                     '-',
                                     style: TextStyle(
                                       fontSize: 25,
                                     ),
                                   ),
+                                  )
                                 ),
                                 Container(
                                   padding: EdgeInsets.symmetric(vertical: 1, horizontal: 12),
@@ -116,7 +130,7 @@ class _paymentPageState extends State<paymentPage> {
                                     )
                                   ),
                                   child: Text(
-                                    '1',
+                                    '$_angka',
                                     style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.w600
@@ -124,13 +138,16 @@ class _paymentPageState extends State<paymentPage> {
                                   ),
                                 ),
                                 InkWell(
-                                  onTap: () {},
-                                  child: Text(
+                                  onTap: () => _increment(),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(horizontal: 4),
+                                    child: Text(
                                     '+',
                                     style: TextStyle(
-                                      fontSize: 20
+                                      fontSize: 20,
                                     ),
                                   ),
+                                  )
                                 )
                               ],
                             ),
