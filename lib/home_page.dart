@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './login_page.dart';
 import './detail_page.dart';
+import './payment_page.dart';
+import './chart_page.dart';
 
 class homePage extends StatelessWidget {
   const homePage({super.key});
@@ -204,7 +206,7 @@ class homePage extends StatelessWidget {
                 children: <Widget>[
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return detailPage();
                           }
@@ -277,7 +279,7 @@ class homePage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return detailPage();
                           }
@@ -350,7 +352,7 @@ class homePage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return detailPage();
                           }
@@ -423,7 +425,7 @@ class homePage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return detailPage();
                           }
@@ -496,7 +498,7 @@ class homePage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return detailPage();
                           }
@@ -569,7 +571,7 @@ class homePage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return detailPage();
                           }
@@ -661,9 +663,9 @@ class homePage extends StatelessWidget {
           children: <Widget>[
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return paymentPage();
                           }
                           ),
                         );
@@ -678,9 +680,9 @@ class homePage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return chartPage();
                           }
                           ),
                         );
@@ -695,9 +697,9 @@ class homePage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return loginPage();
+                            return detailPage();
                           }
                           ),
                         );
@@ -712,7 +714,7 @@ class homePage extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return loginPage();
                           }

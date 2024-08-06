@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import './login_page.dart';
+import './home_page.dart';
 import './detail_page.dart';
+import './chart_page.dart';
 
 class paymentPage extends StatefulWidget {
   const paymentPage({super.key});
@@ -584,9 +587,9 @@ class _paymentPageState extends State<paymentPage> {
           children: <Widget>[
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return detailPage();
+                            return homePage();
                           }
                           ),
                         );
@@ -601,9 +604,9 @@ class _paymentPageState extends State<paymentPage> {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return detailPage();
+                            return chartPage();
                           }
                           ),
                         );
@@ -618,7 +621,7 @@ class _paymentPageState extends State<paymentPage> {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return detailPage();
                           }
@@ -635,9 +638,9 @@ class _paymentPageState extends State<paymentPage> {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return detailPage();
+                            return loginPage();
                           }
                           ),
                         );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import './login_page.dart';
 import './home_page.dart';
 import './payment_page.dart';
+import './chart_page.dart';
 
 class detailPage extends StatefulWidget {
 
@@ -266,7 +268,7 @@ class _detailPageState extends State<detailPage> {
                   child: InkWell(
                   
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return paymentPage();
                           }
@@ -295,7 +297,12 @@ class _detailPageState extends State<detailPage> {
                   child: InkWell(
                   
                   onTap: () {
-                    
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) {
+                            return chartPage();
+                          }
+                          ),
+                        );
                   },
                   child: Container(
                     width: 180,
@@ -376,7 +383,7 @@ class _detailPageState extends State<detailPage> {
           children: <Widget>[
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
                             return homePage();
                           }
@@ -393,9 +400,9 @@ class _detailPageState extends State<detailPage> {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return homePage();
+                            return chartPage();
                           }
                           ),
                         );
@@ -410,12 +417,7 @@ class _detailPageState extends State<detailPage> {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) {
-                            return homePage();
-                          }
-                          ),
-                        );
+                
               },
               child: Container(
                 width: 32,
@@ -427,9 +429,9 @@ class _detailPageState extends State<detailPage> {
             ),
             InkWell(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) {
-                            return homePage();
+                            return loginPage();
                           }
                           ),
                         );

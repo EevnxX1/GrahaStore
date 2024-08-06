@@ -123,10 +123,11 @@ class loginPage extends StatelessWidget {
                   Container(
                     width: screenWidht * 0.8,
                     child: TextField(
+                      obscureText: true,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[300],
-                      labelText: 'Username',
+                      labelText: 'Password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
