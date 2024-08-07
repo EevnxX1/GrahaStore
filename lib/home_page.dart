@@ -182,7 +182,8 @@ class homePage extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   suffixIcon: Icon(
-                    Icons.refresh,
+                    Icons.search_rounded,
+                    size: 30,
                     ),
                   contentPadding: EdgeInsets.only(left: 20, right: 20),
                   border: OutlineInputBorder(
