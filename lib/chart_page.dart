@@ -438,7 +438,12 @@ class _chartPageState extends State<chartPage> {
             ),
             InkWell(
               onTap: () {
-                
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) {
+                            return paymentPage();
+                          }
+                          ),
+                        );
               },
               child: Container(
                 width: 32,

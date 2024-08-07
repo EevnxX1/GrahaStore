@@ -16,6 +16,33 @@ class _detailPageState extends State<detailPage> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height; //dari layar
     final screenWidht = MediaQuery.of(context).size.width; //dari layar
+    double responsive1(screen) {
+      var screenWidth1;
+      if(screen < 400) {
+      screenWidth1 = MediaQuery.of(context).size.width * 0.5;
+      } else {
+      screenWidth1 = MediaQuery.of(context).size.width * 0.55;
+      }
+      return screenWidth1;
+    }
+    double responsive2(screen) {
+      var screenWidth2;
+      if(screen < 400) {
+      screenWidth2 = MediaQuery.of(context).size.width * 0.038;
+      } else {
+      screenWidth2 = MediaQuery.of(context).size.width * 0.04;
+      }
+      return screenWidth2;
+    }
+    double responsive3(screen) {
+      var screenWidth3;
+      if(screen < 400) {
+      screenWidth3 = MediaQuery.of(context).size.width * 0.12;
+      } else {
+      screenWidth3 = MediaQuery.of(context).size.width * 0.12;
+      }
+      return screenWidth3;
+    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -112,7 +139,7 @@ class _detailPageState extends State<detailPage> {
                     child: Image.asset(
                       '../asset/sepatuPrimary.png',
                       fit: BoxFit.cover,
-                      width: screenWidht * 0.55,
+                      width: responsive1(screenWidht),
                     ),
                   )
                 ],
@@ -166,7 +193,7 @@ class _detailPageState extends State<detailPage> {
                       renderBorder: true,
                       borderColor: Colors.black54,
                       borderWidth: 2,
-                      constraints: BoxConstraints.expand(width: 50, height: 30),
+                      constraints: BoxConstraints.expand(width: screenWidht * 0.12, height: 30),
                       borderRadius: BorderRadius.circular(8),
                       textStyle: TextStyle(
                         color: Colors.black,
@@ -180,7 +207,7 @@ class _detailPageState extends State<detailPage> {
                             '39',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
-                              fontSize: 15
+                              fontSize: responsive2(screenWidht)
                             ),
                           ),
                           )
@@ -192,7 +219,7 @@ class _detailPageState extends State<detailPage> {
                             '40',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
-                              fontSize: 15
+                              fontSize: responsive2(screenWidht)
                             ),
                           ),
                           )
@@ -204,7 +231,7 @@ class _detailPageState extends State<detailPage> {
                             '41',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
-                              fontSize: 15
+                              fontSize: responsive2(screenWidht)
                             ),
                           ),
                           )
@@ -216,7 +243,7 @@ class _detailPageState extends State<detailPage> {
                             '42',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
-                              fontSize: 15
+                              fontSize: responsive2(screenWidht)
                             ),
                           ),
                           )
@@ -228,7 +255,7 @@ class _detailPageState extends State<detailPage> {
                             '43',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
-                              fontSize: 15
+                              fontSize: responsive2(screenWidht)
                             ),
                           ),
                           )
@@ -240,7 +267,7 @@ class _detailPageState extends State<detailPage> {
                             '44',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
-                              fontSize: 15
+                              fontSize: responsive2(screenWidht)
                             ),
                           ),
                           )
@@ -330,7 +357,6 @@ class _detailPageState extends State<detailPage> {
             ),
             ),
             Container(
-              height: 318,
               padding: EdgeInsets.all(18),
               margin: EdgeInsets.only(top: 10),
               width: screenWidht * 0.9,
@@ -350,8 +376,9 @@ class _detailPageState extends State<detailPage> {
                     ),
                   ),
                   Container(
-                    width: 80,
-                    height: 5,
+                    margin: EdgeInsets.symmetric(vertical: 4),
+                    width: 70,
+                    height: 4,
                     decoration: BoxDecoration(
                       color: Colors.redAccent.shade100
                     ),

@@ -10,6 +10,16 @@ class homePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidht = MediaQuery.of(context).size.width; //dari layar
+    final screenHeight = MediaQuery.of(context).size.height; //dari layar
+    double responsive1(screen) {
+      var screenWidth1;
+      if(screen < 400) {
+      screenWidth1 = MediaQuery.of(context).size.width * 0.032;
+      } else {
+      screenWidth1 = MediaQuery.of(context).size.width * 0.036;
+      }
+      return screenWidth1;
+    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
@@ -87,7 +97,8 @@ class homePage extends StatelessWidget {
                       'All',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        color: Colors.black
+                        color: Colors.black,
+                        fontSize: responsive1(screenWidht)
                       ),
                       ),
                   ),
@@ -108,7 +119,8 @@ class homePage extends StatelessWidget {
                       'Nike Air Jordan',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        color: Colors.black
+                        color: Colors.black,
+                        fontSize: responsive1(screenWidht)
                       ),
                       ),
                   ),
@@ -129,7 +141,8 @@ class homePage extends StatelessWidget {
                       'Puma',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        color: Colors.black
+                        color: Colors.black,
+                        fontSize: responsive1(screenWidht)
                       ),
                       ),
                   ),
@@ -150,7 +163,8 @@ class homePage extends StatelessWidget {
                       'Nike Air Force',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        color: Colors.black
+                        color: Colors.black,
+                        fontSize: responsive1(screenWidht)
                       ),
                       ),
                   ),
@@ -216,7 +230,7 @@ class homePage extends StatelessWidget {
                     child: Container(
                     padding: EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: Colors.red.shade50,
+                      color: Colors.grey.shade100,
                       borderRadius: BorderRadius.circular(20)
                     ),
                     width: (screenWidht * 0.9) * 0.47,
@@ -289,7 +303,7 @@ class homePage extends StatelessWidget {
                     child: Container(
                     padding: EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: Colors.red.shade50,
+                      color: Colors.grey.shade100,
                       borderRadius: BorderRadius.circular(20)
                     ),
                     width: (screenWidht * 0.9) * 0.47,
@@ -362,7 +376,7 @@ class homePage extends StatelessWidget {
                     child: Container(
                     padding: EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: Colors.red.shade50,
+                      color: Colors.grey.shade100,
                       borderRadius: BorderRadius.circular(20)
                     ),
                     width: (screenWidht * 0.9) * 0.47,
@@ -435,7 +449,7 @@ class homePage extends StatelessWidget {
                     child: Container(
                     padding: EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: Colors.red.shade50,
+                      color: Colors.grey.shade100,
                       borderRadius: BorderRadius.circular(20)
                     ),
                     width: (screenWidht * 0.9) * 0.47,
@@ -508,7 +522,7 @@ class homePage extends StatelessWidget {
                     child: Container(
                     padding: EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: Colors.red.shade50,
+                      color: Colors.grey.shade100,
                       borderRadius: BorderRadius.circular(20)
                     ),
                     width: (screenWidht * 0.9) * 0.47,
@@ -581,7 +595,7 @@ class homePage extends StatelessWidget {
                     child: Container(
                     padding: EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(
-                      color: Colors.red.shade50,
+                      color: Colors.grey.shade100,
                       borderRadius: BorderRadius.circular(20)
                     ),
                     width: (screenWidht * 0.9) * 0.47,
